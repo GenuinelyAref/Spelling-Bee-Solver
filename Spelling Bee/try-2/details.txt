@@ -1,0 +1,2 @@
+word lengths: 2 - 6
+type of graph: computation time vs number of words

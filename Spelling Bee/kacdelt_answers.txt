@@ -1,0 +1,75 @@
+   Four letters | Five letters | Six letters | Seven letters | Eight+ letters |
+ ______________________________________________________________________________
+1          aced |        aceta |      accede |       acceded |       acetated |
+2          acta |        ackee |      acetal |       acetate |       attacked |
+3          akee |        acted |      addled |       alcalde |       calceate |
+4          alae |        added |      alated |       cackled |       dealated |
+5          alec |        addle |      alcade |       cadelle |       deleaded |
+6          alee |        akela |      allele |       catcall |       detected |
+7          caca |        alack |      atlatl |       clacked |       lactated |
+8          cade |        alate |      attack |       cladded |       telltale |
+9          cake |        allee |      cackle |       cleated |      catcalled |
+10         calk |        cadet |      caecal |       cleeked |      delectate |
+11         call |        caeca |      calked |       daddled |      teakettle |
+12         cate |        caked |      called |       dealate |     delectated |
+13         ceca |        calla |      callee |       decadal |     tattletale |
+14         cede |        cecal |      callet |       delated |                |
+15         cell |        ceded |      catted |       deleted |                |
+16         celt |        cella |      cattle |       elected |                |
+17         cete |        clack |      cellae |       electee |                |
+18         clad |        clade |      celled |       keckled |                |
+19         dace |        cleat |      daddle |       lactate |                |
+20         dada |        cleek |      daedal |       lacteal |                |
+21         dale |        dated |      decade |       tackled |                |
+22         data |        dealt |      decked |       talcked |                |
+23         date |        decal |      deckel |       tattled |                |
+24         dead |        dedal |      deckle |       teacake |                |
+25         deal |        deked |      deeded |               |                |
+26         deck |        deled |      delate |               |                |
+27         deed |        delta |      delead |               |                |
+28         deet |        eclat |      delete |               |                |
+29         deke |        elate |      detect |               |                |
+30         dele |        elect |      elated |               |                |
+31         dell |        laced |      kecked |               |                |
+32         delt |        laded |      keckle |               |                |
+33         eked |        ladle |      keeked |               |                |
+34         kaka |        laked |      keeled |               |                |
+35         kale |        lated |      kettle |               |                |
+36         kata |        latke |      lacked |               |                |
+37         keck |        latte |      ladled |               |                |
+38         keek |        tacet |      lalled |               |                |
+39         keel |        tecta |      leaded |               |                |
+40         keet |        telae |      leaked |               |                |
+41         kelt |              |      lekked |               |                |
+42         lace |              |      letted |               |                |
+43         lack |              |      tacked |               |                |
+44         lade |              |      tacket |               |                |
+45         lake |              |      tackle |               |                |
+46         lall |              |      talced |               |                |
+47         late |              |      talked |               |                |
+48         lead |              |      tatted |               |                |
+49         leak |              |      tattle |               |                |
+50         leal |              |      teated |               |                |
+51         leek |              |      tectal |               |                |
+52         leet |              |      tedded |               |                |
+53         leke |              |             |               |                |
+54         tace |              |             |               |                |
+55         tack |              |             |               |                |
+56         tact |              |             |               |                |
+57         tael |              |             |               |                |
+58         taka |              |             |               |                |
+59         take |              |             |               |                |
+60         tala |              |             |               |                |
+61         talc |              |             |               |                |
+62         tale |              |             |               |                |
+63         talk |              |             |               |                |
+64         tall |              |             |               |                |
+65         tate |              |             |               |                |
+66         teak |              |             |               |                |
+67         teal |              |             |               |                |
+68         teat |              |             |               |                |
+69         teed |              |             |               |                |
+70         teel |              |             |               |                |
+71         tela |              |             |               |                |
+72         tele |              |             |               |                |
+73         tell |              |             |               |                |

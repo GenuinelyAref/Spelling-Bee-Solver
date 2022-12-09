@@ -1,0 +1,5 @@
+print("\n\n\033[0;37;41m \033[0m Red label for error messages\n")
+print("\033[0;37;43m \033[0m Yellow/Orange label for information messages (no action required)\n")
+print("\033[0;37;44m \033[0m Blue label for prompts (action required)\n")
+print("\033[0;37;45m \033[0m Purple label for new words found while computing\n")
+print("\033[0;37;46m \033[0m Teal/Aqua label for output messages; results, progress updates and thank-you message\n")

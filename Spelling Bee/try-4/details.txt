@@ -1,0 +1,2 @@
+word lengths: 2 - 7
+type of graph: log base 10 (time) vs number of words
