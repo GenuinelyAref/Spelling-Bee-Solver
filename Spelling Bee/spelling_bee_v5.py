@@ -20,6 +20,24 @@ def line_colour_label(colour):
     else:
         x = 0
     return "\033[0;37;4{}m \033[0m ".format(x)
+
+
+def bolden():
+    return "\033[1m"
+
+
+def italicise():
+    return "\033[3m"
+
+
+def underline():
+    return "\033[4m"
+
+
+def reset_text_formatting():
+    return "\033[0m"
+
+
 # Generic yes/no checking function
 def yes_no_checker(question, error_message):
     valid_two = False
