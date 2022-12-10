@@ -2,6 +2,24 @@ import time
 import pandas as pd
 
 
+def line_colour_label(colour):
+    if colour == "red":
+        x = 1
+    elif colour == "green":
+        x = 2
+    elif colour == "yellow":
+        x = 3
+    elif colour == "blue":
+        x = 4
+    elif colour == "pink":
+        x = 5
+    elif colour == "cyan":
+        x = 6
+    elif colour == "silver":
+        x = 7
+    else:
+        x = 0
+    return "\033[0;37;4{}m \033[0m ".format(x)
 # Generic yes/no checking function
 def yes_no_checker(question, error_message):
     valid_two = False
