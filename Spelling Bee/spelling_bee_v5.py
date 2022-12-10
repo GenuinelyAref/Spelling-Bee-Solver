@@ -60,14 +60,15 @@ def get_file_name():
     var_file_name = ""
     valid_file_name = False
     count = 0
-    print("\n\033[0;37;43m \033[0m The file name can only have alphanumeric characters "
+    print("\n" + line_colour_label("yellow") + "The file name can only have alphanumeric characters "
           "(spaces will be replaced with underscores)")
     while not valid_file_name:
         count += 1
         if count > 1:
-            print("\n\033[0;37;41m \033[0m The file name can only have alphanumeric characters "
+            print("\n" + line_colour_label("red") + "The file name can only have alphanumeric characters "
                   "(spaces will be replaced with underscores)")
-        var_file_name = input("\n\033[0;37;44m \033[0m Please enter a file name: ").strip(" ").replace(" ", "_")
+        var_file_name = input("\n" + line_colour_label("blue") + "Please enter a file name: ")\
+            .strip(" ").replace(" ", "_")
         if var_file_name.replace("_", "").isalnum():
             valid_file_name = True
     return var_file_name
@@ -90,22 +91,23 @@ def letter_input_check():
     user_input = ""
     valid_input = False
     count = 0
-    print("\n\033[0;37;43m \033[0m \033[4m\033[3mFor the following input, please enter:\033[0m\n"
-          "\033[0;37;43m \033[0m \033[3m- seven letters only, separated by commas\n"
-          "\033[0;37;43m \033[0m \033[3m- no duplicate letters\n"
-          "\033[0;37;43m \033[0m \033[3m- no other characters\n"
-          "\033[0;37;43m \033[0m \033[3m- (white spaces and capitals are forgivable)\n")
+    print("\n" + line_colour_label("yellow") + underline() + italicise() +
+          "For the following input, please enter:" + reset_text_formatting() + "\n"
+          + line_colour_label("yellow") + "- seven letters only, separated by commas\n"
+          + line_colour_label("yellow") + "- no duplicate letters\n"
+          + line_colour_label("yellow") + "- no other characters\n"
+          + line_colour_label("yellow") + "- (white spaces and capitals are forgivable)\n")
     while not valid_input:
         count += 1
         if count > 1:
-            print("\n\n"
-                  "\033[0;37;41m \033[0m That's not a valid answer\n"
-                  "\033[0;37;41m \033[0m \033[4mPlease enter:\033[0m\n"
-                  "\033[0;37;41m \033[0m - seven letters only, separated by commas\n"
-                  "\033[0;37;41m \033[0m - no duplicate letters\n"
-                  "\033[0;37;41m \033[0m - no other characters\n"
-                  "\033[0;37;41m \033[0m - (white spaces and capitals are forgivable)\n")
-        user_input = input("\033[0;37;44m \033[0m "
+            print("\n\n" +
+                  line_colour_label("red") + "That's not a valid answer\n" +
+                  line_colour_label("red") + underline() + "Please enter:" + reset_text_formatting() + "\n" +
+                  line_colour_label("red") + "- seven letters only, separated by commas\n" +
+                  line_colour_label("red") + "- no duplicate letters\n" +
+                  line_colour_label("red") + "- no other characters\n" +
+                  line_colour_label("red") + "- (white spaces and capitals are forgivable)\n")
+        user_input = input(line_colour_label("blue") +
                            "Enter the seven letters, starting with the must-have letter: ").replace(" ", "").replace(
             ",", "").lower()
         valid_input = len(user_input) == 7 and user_input.isalpha() and not repeated_letter(user_input)
@@ -150,20 +152,22 @@ words_dataframe = {
 }
 
 # print title and instructions of program
-print("\033[1m-----------------------------------")
-print("--- NY Spelling Bee word finder ---")
-print("-----------------------------------\033[0m")
-print("\n\033[0;37;43m \033[0m This tool helps you find the answers to the NYT Spelling Bee puzzle.\n"
-      "\033[0;37;43m \033[0m Learn more about it here: https://www.nytimes.com/puzzles/spelling-bee\n\n"
-      "\033[0;37;44m \033[0m You will \033[1m\033[4mprovide\033[0m:\n"
-      "\033[0;37;44m \033[0m - a list of 7 unique letters\n"
-      "\033[0;37;44m \033[0m - the must-have letter\n\n"
-      "\033[0;37;46m \033[0m You will \033[1m\033[4mreceive\033[0m:\n"
-      "\033[0;37;46m \033[0m - 4, 5, 6 and 7-letter words as they are computed\n"
-      "\033[0;37;46m \033[0m - a list of all the words at the end\n"
-      "\033[0;37;46m \033[0m - updates (to see the progress of the computation)\n"
-      "\033[0;37;46m \033[0m - total computation time\n"
-      "\033[0;37;46m \033[0m - the option to save the list of words to a text file "
+print(bolden() +
+      "-----------------------------------\n"
+      "--- NY Spelling Bee word finder ---\n"
+      "-----------------------------------"
+      + reset_text_formatting())
+print("\n" + line_colour_label("yellow") + "This tool helps you find the answers to the NYT Spelling Bee puzzle.\n"
+      + line_colour_label("yellow") + "Learn more about it here: https://www.nytimes.com/puzzles/spelling-bee\n\n"
+      + line_colour_label("blue") + "You will " + bolden() + underline() + "provide" + reset_text_formatting() + ":\n"
+      + line_colour_label("blue") + "- a list of 7 unique letters\n"
+      + line_colour_label("blue") + "- the must-have letter\n\n"
+      + line_colour_label("cyan") + "You will " + bolden() + underline() + "receive" + reset_text_formatting() + ":\n"
+      + line_colour_label("cyan") + "- 4, 5, 6 and 7-letter words as they are computed\n"
+      + line_colour_label("cyan") + "- a list of all the words at the end\n"
+      + line_colour_label("cyan") + "- updates (to see the progress of the computation)\n"
+      + line_colour_label("cyan") + "- total computation time\n"
+      + line_colour_label("cyan") + "- the option to save the list of words to a text file "
       )
 
 print("\n")
@@ -173,20 +177,22 @@ processed_user_input = letter_input_check()
 letters = [processed_user_input[0], processed_user_input[1], processed_user_input[2], processed_user_input[3],
            processed_user_input[4], processed_user_input[5], processed_user_input[6]]
 
-print("\n\n\n\033[0;37;43m \033[0m \033[1m***** Starting computation... *****\033[0m\n")
+print("\n\n\n" + line_colour_label("yellow") + bolden() + "***** Starting computation... *****" +
+      reset_text_formatting() + "\n")
 
 word_results_raw = get_words(letters)
 all_words = word_results_raw[1]
 total_comp_time = word_results_raw[0]
 
-print("\n\033[0;37;43m \033[0m All iterations finished, printing results...\n")
+print("\n" + line_colour_label("yellow") + "All iterations finished, printing results...\n")
 
 # sort words from longest to shortest
 all_words.sort(key=len)
 for word_num in range(0, len(all_words)):
     if len(all_words[word_num]) != len(all_words[word_num - 1]):
-        print("\n\033[0;37;46m \033[0m \033[1m{} Letter Words:\033[0m".format(len(all_words[word_num])))
-    print("\033[0;37;46m \033[0m " + str(word_num + 1) + ". " + all_words[word_num])
+        print("\n" + line_colour_label("cyan") + bolden() + "{} Letter Words:".format(len(all_words[word_num]))
+              + reset_text_formatting())
+    print(line_colour_label("cyan") + str(word_num + 1) + ". " + all_words[word_num])
     if len(all_words[word_num]) == 4:
         four_letter_words.append(all_words[word_num] + " |")
     elif len(all_words[word_num]) == 5:
@@ -212,19 +218,21 @@ for i in range(0, 5):
         """all_lists[i].append(" ")"""
 
 
-print("\n\n\033[0;37;46m \033[0m \033[1mTotal computation time: {}s\033[0m".format(round(total_comp_time, 1)))
-print("\033[0;37;46m \033[0m \033[1mTotal of {} words\033[0m".format(len(all_words)))
+print("\n\n" + line_colour_label("cyan") + bolden() + "Total computation time: {}s".format(round(total_comp_time, 1))
+      + reset_text_formatting())
+print(line_colour_label("cyan") + bolden() + "Total of {} words".format(len(all_words)) + reset_text_formatting())
 
 
-want_file = yes_no_checker("\n\033[0;37;44m \033[0m Do you want to save the list of words? Yes/No: ",
-                           "\033[0;37;41m \033[0m That's not a valid answer\n")
+want_file = yes_no_checker("\n" + line_colour_label("blue") + "Do you want to save the list of words? Yes/No: ",
+                           line_colour_label("red") + "That's not a valid answer\n")
 if want_file == "Yes":
     confirmed = False
     while not confirmed:
         file_name = get_file_name()
-        want_to_change = yes_no_checker("\n\033[0;37;43m \033[0m Your file name will be \"{}.txt\""
-                                        "\n\n\033[0;37;44m \033[0m Do you want to change it? Yes/No: ".format(file_name),
-                                        "\033[0;37;41m \033[0m That's not a valid answer")
+        want_to_change = yes_no_checker("\n" + line_colour_label("yellow") + "Your file name will be \"{}.txt\""
+                                        "\n\n" + line_colour_label("blue") + "Do you want to change it? Yes/No: "
+                                        .format(file_name),
+                                        line_colour_label("red") + "That's not a valid answer")
         if want_to_change == "No":
             confirmed = True
     words_frame = pd.DataFrame(words_dataframe)
@@ -249,7 +257,8 @@ if want_file == "Yes":
     my_file.write(new_file_contents)
     my_file.close()
 
-    print("\n\033[0;37;46m \033[0m \033[3mThe words have been successfully saved to file.\033[0m")
+    print("\n" + line_colour_label("cyan") + italicise() + "The words have been successfully saved to file."
+          + reset_text_formatting())
 else:
     print()
-print("\033[0;37;46m \033[0m Thank you for using this program!")
+print(line_colour_label("cyan") + "Thank you for using this program!")
