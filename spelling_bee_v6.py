@@ -90,7 +90,7 @@ def get_file_name():
     valid_file_name = False
     # give user notice on file name format
     print("\n" + line_colour_label("yellow") + "The file name can only have alphanumeric characters "
-          "(spaces will be replaced with underscores)")
+                                               "(spaces will be replaced with underscores)")
     # repeat until file name is valid
     while not valid_file_name:
         # every time input is taken, add one count
@@ -99,9 +99,9 @@ def get_file_name():
         if input_count > 1:
             # same as prior user notice but in red
             print("\n" + line_colour_label("red") + "The file name can only have alphanumeric characters "
-                  "(spaces will be replaced with underscores)")
+                                                    "(spaces will be replaced with underscores)")
         # manipulate file name to remove leading/trailing spaces and replace other spaces with underscores
-        var_file_name = input("\n" + line_colour_label("blue") + "Please enter a file name: ")\
+        var_file_name = input("\n" + line_colour_label("blue") + "Please enter a file name: ") \
             .strip(" ").replace(" ", "_")
         # if file name is alphanumeric, change file name validity status to True
         if var_file_name.replace("_", "").isalnum():
@@ -159,7 +159,7 @@ def letter_input_check():
                   line_colour_label("red") + "- (white spaces and capitals are forgivable)\n")
         # get letter input from user, and remove commas, leading/trailing spaces and apply lowercase to all characters
         user_input = input(line_colour_label("blue") +
-                           "Enter the seven letters, starting with the must-have letter: ").replace(" ", "")\
+                           "Enter the seven letters, starting with the must-have letter: ").replace(" ", "") \
             .replace(",", "").lower()
         # check that processed input is alphanumeric, 7 characters (letters) long and no repeats are present
         # if all conditions met, set letter input validity as True
@@ -236,17 +236,17 @@ print("\n" + line_colour_label("yellow") + "This tool helps you find the answers
       + line_colour_label("cyan") + "- a list of all the words at the end\n"
       + line_colour_label("cyan") + "- updates (to see the progress of the computation)\n"
       + line_colour_label("cyan") + "- total computation time\n"
-      + line_colour_label("cyan") + "- the option to save the list of words to a text file "
+      + line_colour_label("cyan") + "- the option to save the list of words to a text file\n\n"
       )
-
-print("\n")
 
 # get letters from user
 processed_user_input = letter_input_check()
 letters = [processed_user_input[0], processed_user_input[1], processed_user_input[2], processed_user_input[3],
            processed_user_input[4], processed_user_input[5], processed_user_input[6]]
 
-print("\n\n\n" + line_colour_label("yellow") + bolden() + "***** Starting computation... *****" +
+print("\n\n")
+
+print(line_colour_label("yellow") + bolden() + "***** Starting computation... *****" +
       reset_text_formatting() + "\n")
 
 word_results_raw = get_words(letters)
@@ -286,11 +286,9 @@ for i in range(0, 5):
         # if vertical separator (made up of | character) is to only reach the final word of each column, then use:
         """all_lists[i].append(" ")"""
 
-
 print("\n\n" + line_colour_label("cyan") + bolden() + "Total computation time: {}s".format(round(total_comp_time, 1))
       + reset_text_formatting())
 print(line_colour_label("cyan") + bolden() + "Total of {} words".format(len(all_words)) + reset_text_formatting())
-
 
 want_file = yes_no_checker("\n" + line_colour_label("blue") + "Do you want to save the list of words? Yes/No: ",
                            line_colour_label("red") + "That's not a valid answer\n")
@@ -299,7 +297,8 @@ if want_file == "Yes":
     while not confirmed:
         file_name = get_file_name()
         want_to_change = yes_no_checker("\n" + line_colour_label("yellow") + "Your file name will be \"{}.txt\""
-                                        "\n\n" + line_colour_label("blue") + "Do you want to change it? Yes/No: "
+                                                                             "\n\n" + line_colour_label(
+            "blue") + "Do you want to change it? Yes/No: "
                                         .format(file_name),
                                         line_colour_label("red") + "That's not a valid answer")
         if want_to_change == "No":
