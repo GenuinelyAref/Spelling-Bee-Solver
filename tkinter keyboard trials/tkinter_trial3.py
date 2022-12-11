@@ -148,8 +148,8 @@ button_twenty_five.place(x=595, y=190)
 button_twenty_six = RoundedButton(root, 80, 80, 10, 0, 'yellow', command=test)
 button_twenty_six.place(x=685, y=190)
 
-mylabel = canvas.create_text((400, 190), text="Label text")
-mylabel.lift()
+# mylabel = canvas.create_text((400, 190), text="Label text")
+# mylabel.lift()
 """
 canvas.tag_raise(canvas.create_text(300, 50, text="HELLO WORLD", fill="black", font=('Helvetica 15 bold')))
 
