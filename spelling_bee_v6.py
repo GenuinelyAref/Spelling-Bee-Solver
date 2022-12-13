@@ -84,6 +84,12 @@ def yes_no_checker(question, error_message):
 # print banner with program name
 def title_banner():
     # print program title banner
+    print(line_colour_label("pink") + bolden() + "-------------------------------------------\n"
+          + reset_text_formatting() +
+          line_colour_label("pink") + bolden() + "-----   NY Spelling Bee word finder   -----\n"
+          + reset_text_formatting() +
+          line_colour_label("pink") + bolden() + "-------------------------------------------\n\n"
+          + reset_text_formatting())
 
 
 # program description + info
