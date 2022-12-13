@@ -2,6 +2,8 @@
 import time
 # import pandas library for creation of nicely displayed table (using pandas dataframe)
 import pandas as pd
+# import module to obtain current date and time
+from datetime import datetime
 
 
 # function to create a vertical coloured slit at the beginning of each line
@@ -327,6 +329,33 @@ def get_file_name():
                 change_count = input_count
 
 
+# get current date and time
+def date_and_time():
+    # datetime object containing current date and time
+    now = datetime.now()
+    # store the 24-hour version of the hour in a variable
+    hour = int(now.strftime("%H"))
+    # if it's 12 or over (12-23), then it must be pm
+    if hour >= 12:
+        time_of_day = "pm"
+    # if it's under 12 (0-11) then it must be am
+    else:
+        time_of_day = "am"
+    # if the hour is 12am
+    if hour == 0:
+        # write 12 as the hour instead of zero as a string value
+        adjusted_hour = "12"
+    # otherwise, the hour is 1am - 11pm
+    else:
+        # create string version of the hour value
+        adjusted_hour = str(int(now.strftime("%I")))
+    # create string version of current time
+    var_time = str(now.strftime("{}:%M{}".format(adjusted_hour, time_of_day)))
+    # create string version of today's date
+    var_date = str(now.strftime("%d/%m/%Y"))
+    return [var_time, var_date]
+
+
 # save results to text (and csv) file(s)
 def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date):
     # create dataframe to store words separately according to their lengths
@@ -361,6 +390,8 @@ def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date):
     # close text file
     temp_file.close()
 
+    # write the date and time to the text file
+    string_list.insert(0, "This file was created at {} on {}.\n\n".format(var_time, var_date))
     string_list.insert(2, "   ----------------------------------------------------------------------------\n")
     string_list.insert(4, "   ----------------------------------------------------------------------------\n")
     # remove second list item (with index 0 and no content)
@@ -429,7 +460,13 @@ if want_file == "Yes":
     file_name = get_file_name()
 
     # get current time and date
+    time_and_date_raw = date_and_time()
+    current_time = time_and_date_raw[0]
+    current_date = time_and_date_raw[1]
+
+    # save words to file
     save_to_file(all_lists, file_name, letters, current_time, current_date)
+# user does not want to save the words
 else:
     # add spacing to separate differently-coloured line labels
     print()
