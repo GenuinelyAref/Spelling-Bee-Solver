@@ -183,15 +183,6 @@ def get_words(var_letters):
     start_time = time.time()
     # cycle through all words in list of words
     for word in range(0, len(words)):
-        # #################
-        # #################
-        # #################
-        # #################
-        # LEFT COMMENTING HERE
-        # #################
-        # #################
-        # #################
-        # #################
         stripped_word = words[word - running_removal_count]
         for letter in range(0, len(var_letters)):
             stripped_word = stripped_word.replace(var_letters[letter], "")
@@ -327,6 +318,26 @@ if want_file == "Yes":
 
     print("\n" + line_colour_label("cyan") + italicise() + "The words have been successfully saved to file."
           + reset_text_formatting())
+# MAIN ROUTINE
+# initialise text variables
+# show program title
+# show instructions and program info
+# get valid list of letters from user
+# update user on the commencement of the computation
+# call for computation and collect raw output
+# retrieve list of valid words
+# retrieve overall computation time
+# update user on the conclusion of the computation
+# print all words found
+# give total number of words and total computation time
+# check if user wants to save file
+# user wants to save the words
+    # sort all words into lists according to their lengths
+    # get file name from user
+    # save words to file
+# user does not want to save the words
 else:
+    # add spacing to separate differently-coloured line labels
     print()
 print(line_colour_label("cyan") + "Thank you for using this program!")
+# farewell user
