@@ -1,39 +1,34 @@
-"""import time
+# initialise list
+words = []
+# open and read the txt file with all the possible words
+with open('word_list_full.txt') as f:
+    # read the file line by line
+    for line in f.readlines():
+        # add each word as a separate item in a list
+        words.append(line.strip("\n"))
 
+# take into account number of words removed to offset them correctly when calling index
+removal_count = 0
+# for all the words in the word list
+for word in range(0, len(words)):
+    # if each word is less than 4 characters long
+    if len(words[word - removal_count]) < 4:
+        # remove it from the list
+        words.remove(words[word - removal_count])
+        # add one to the removal index count
+        removal_count += 1
 
-def filter_words_from_list(letters):
-    words = []
-    start_time = time.time()
-    with open('word_list_full.txt') as f:
-        for line in f.readlines():
-            words.append(line.strip("\n"))
-    count = 0
-    end_time = time.time()
-    extraction_time = end_time - start_time
-    start_time = time.time()
-    for word in range(0, len(words)):
-        stripped_word = words[word - count]
-        for letter in range(0, len(letters)):
-            stripped_word = stripped_word.replace(letters[letter], "")
-        if len(stripped_word) > 0:
-            words.remove(words[word - count])
-            count += 1
-        elif len(words[word - count]) < 4:
-            words.remove(words[word - count])
-            count += 1
-    end_time = time.time()
-    computation_time = end_time - start_time
-    return [extraction_time, computation_time, words]
+# for all the words in the word list
+for word in range(0, len(words)):
+    # re-add the removed a line break at the end of word
+    words[word] = "{}\n".format(words[word])
 
+# reopen text file but in write view
+my_file = open('word_list_full.txt', "w")
+# store new list (after changes) to a local variable
+new_file_contents = "".join(words)
 
-list_of_letters = ['k', 'a', 'c', 'd', 'e', 'l', 't']
-
-print("Original length: 178,693 words")
-raw_result = filter_words_from_list(list_of_letters)
-list_of_valid_words = raw_result[2]
-time_one = raw_result[0]
-time_two = raw_result[1]
-print("Time taken to turn txt file into a list: {}s".format(round(time_one, 1)))
-print("Time taken to find all valid words: {}s".format(round(time_two, 1)))
-print("Valid words for the letters KACDELT: {} words".format(len(list_of_valid_words)))
-print("The words are:\n{}".format(list_of_valid_words))"""
+# write the local variable contents to the text file, replacing the 2nd line with a horizontal separator
+my_file.write(new_file_contents)
+# close the text file
+my_file.close()
