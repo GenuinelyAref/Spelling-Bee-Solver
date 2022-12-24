@@ -1,4 +1,4 @@
-
+"""
 def strip_invalid(lst):
     # initialise variables
     count = 1
@@ -48,3 +48,21 @@ print("Total permutation possible now: {}".format(total_words))
 print("7^7 = {}".format(7 * 7 * 7 * 7 * 7 * 7 * 7))
 print("Percentage of original number of permutations: {}%"
       .format(round(100*total_words/(7 * 7 * 7 * 7 * 7 * 7 * 7), 2)))
+"""
+import pandas as pd
+# create dataframe to store words separately according to their lengths
+words_dataframe = {
+    "Four letters |": ["abcd", "edgh"],
+    "Five letters |": ["abacd", "edgah"],
+    "Six letters |": ["abaacd", "eaadgh"],
+    "Seven letters |": ["abaaacd", "edaaagh"],
+    "Eight+ letters |": ["abcaaaad", "edaaaagh"],
+}
+# create pandas dataframe
+words_frame = pd.DataFrame(words_dataframe)
+# make sure all rows are shown and none are hidden
+pd.set_option('display.max_rows', None)
+# Sort columns in dataframe by four letters column (first column)
+words_frame = words_frame.set_index("Four letters |")
+
+words_frame.to_csv('Test.txt', header=False, index=None, sep=' ', mode='a')
