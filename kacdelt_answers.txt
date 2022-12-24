@@ -1,5 +1,10 @@
+The letters chosen are: 'k' (key letter), 'a', 'c', 'd', 'e', 'l' and 't'.
+
+This file was created at 12:16am on 24/12/2022.
+
+   ----------------------------------------------------------------------------
    Four letters | Five letters | Six letters | Seven letters | Eight+ letters |
- ______________________________________________________________________________
+   ----------------------------------------------------------------------------
 1          aced |        aceta |      accede |       acceded |       acetated |
 2          acta |        ackee |      acetal |       acetate |       attacked |
 3          akee |        acted |      addled |       alcalde |       calceate |

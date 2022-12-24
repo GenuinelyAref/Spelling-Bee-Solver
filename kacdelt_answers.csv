@@ -1,75 +1,75 @@
-Four letters |,Five letters |,Six letters |,Seven letters |,Eight+ letters |
+Four letters,Five letters,Six letters,Seven letters,Eight+ letters
+aced,aceta,accede,acceded,acetated
+acta,ackee,acetal,acetate,attacked
+akee,acted,addled,alcalde,calceate
+alae,added,alated,cackled,dealated
+alec,addle,alcade,cadelle,deleaded
+alee,akela,allele,catcall,detected
+caca,alack,atlatl,clacked,lactated
+cade,alate,attack,cladded,telltale
+cake,allee,cackle,cleated,catcalled
+calk,cadet,caecal,cleeked,delectate
+call,caeca,calked,daddled,teakettle
+cate,caked,called,dealate,delectated
+ceca,calla,callee,decadal,tattletale
+cede,cecal,callet,delated, 
+cell,ceded,catted,deleted, 
+celt,cella,cattle,elected, 
+cete,clack,cellae,electee, 
+clad,clade,celled,keckled, 
+dace,cleat,daddle,lactate, 
+dada,cleek,daedal,lacteal, 
+dale,dated,decade,tackled, 
+data,dealt,decked,talcked, 
+date,decal,deckel,tattled, 
+dead,dedal,deckle,teacake, 
+deal,deked,deeded, , 
+deck,deled,delate, , 
+deed,delta,delead, , 
+deet,eclat,delete, , 
+deke,elate,detect, , 
+dele,elect,elated, , 
+dell,laced,kecked, , 
+delt,laded,keckle, , 
+eked,ladle,keeked, , 
+kaka,laked,keeled, , 
+kale,lated,kettle, , 
+kata,latke,lacked, , 
+keck,latte,ladled, , 
+keek,tacet,lalled, , 
+keel,tecta,leaded, , 
+keet,telae,leaked, , 
+kelt, ,lekked, , 
+lace, ,letted, , 
+lack, ,tacked, , 
+lade, ,tacket, , 
+lake, ,tackle, , 
+lall, ,talced, , 
+late, ,talked, , 
+lead, ,tatted, , 
+leak, ,tattle, , 
+leal, ,teated, , 
+leek, ,tectal, , 
+leet, ,tedded, , 
+leke, , , , 
+tace, , , , 
+tack, , , , 
+tact, , , , 
+tael, , , , 
+taka, , , , 
+take, , , , 
+tala, , , , 
+talc, , , , 
+tale, , , , 
+talk, , , , 
+tall, , , , 
+tate, , , , 
+teak, , , , 
+teal, , , , 
+teat, , , , 
+teed, , , , 
+teel, , , , 
+tela, , , , 
+tele, , , , 
+tell, , , , 
  , , , , 
-aced |,aceta |,accede |,acceded |,acetated |
-acta |,ackee |,acetal |,acetate |,attacked |
-akee |,acted |,addled |,alcalde |,calceate |
-alae |,added |,alated |,cackled |,dealated |
-alec |,addle |,alcade |,cadelle |,deleaded |
-alee |,akela |,allele |,catcall |,detected |
-caca |,alack |,atlatl |,clacked |,lactated |
-cade |,alate |,attack |,cladded |,telltale |
-cake |,allee |,cackle |,cleated |,catcalled |
-calk |,cadet |,caecal |,cleeked |,delectate |
-call |,caeca |,calked |,daddled |,teakettle |
-cate |,caked |,called |,dealate |,delectated |
-ceca |,calla |,callee |,decadal |,tattletale |
-cede |,cecal |,callet |,delated |, |
-cell |,ceded |,catted |,deleted |, |
-celt |,cella |,cattle |,elected |, |
-cete |,clack |,cellae |,electee |, |
-clad |,clade |,celled |,keckled |, |
-dace |,cleat |,daddle |,lactate |, |
-dada |,cleek |,daedal |,lacteal |, |
-dale |,dated |,decade |,tackled |, |
-data |,dealt |,decked |,talcked |, |
-date |,decal |,deckel |,tattled |, |
-dead |,dedal |,deckle |,teacake |, |
-deal |,deked |,deeded |, |, |
-deck |,deled |,delate |, |, |
-deed |,delta |,delead |, |, |
-deet |,eclat |,delete |, |, |
-deke |,elate |,detect |, |, |
-dele |,elect |,elated |, |, |
-dell |,laced |,kecked |, |, |
-delt |,laded |,keckle |, |, |
-eked |,ladle |,keeked |, |, |
-kaka |,laked |,keeled |, |, |
-kale |,lated |,kettle |, |, |
-kata |,latke |,lacked |, |, |
-keck |,latte |,ladled |, |, |
-keek |,tacet |,lalled |, |, |
-keel |,tecta |,leaded |, |, |
-keet |,telae |,leaked |, |, |
-kelt |, |,lekked |, |, |
-lace |, |,letted |, |, |
-lack |, |,tacked |, |, |
-lade |, |,tacket |, |, |
-lake |, |,tackle |, |, |
-lall |, |,talced |, |, |
-late |, |,talked |, |, |
-lead |, |,tatted |, |, |
-leak |, |,tattle |, |, |
-leal |, |,teated |, |, |
-leek |, |,tectal |, |, |
-leet |, |,tedded |, |, |
-leke |, |, |, |, |
-tace |, |, |, |, |
-tack |, |, |, |, |
-tact |, |, |, |, |
-tael |, |, |, |, |
-taka |, |, |, |, |
-take |, |, |, |, |
-tala |, |, |, |, |
-talc |, |, |, |, |
-tale |, |, |, |, |
-talk |, |, |, |, |
-tall |, |, |, |, |
-tate |, |, |, |, |
-teak |, |, |, |, |
-teal |, |, |, |, |
-teat |, |, |, |, |
-teed |, |, |, |, |
-teel |, |, |, |, |
-tela |, |, |, |, |
-tele |, |, |, |, |
-tell |, |, |, |, |
