@@ -290,18 +290,6 @@ def prepare_for_print(var_valid_words):
     for i in range(0, 5):
         while len(var_clean_all_lists[i]) < var_max_length:
             var_clean_all_lists[i].append(" ")
-    # add a space at the beginning of each list of words for printing (to file) purposes
-    var_four_letter_words.pop(-1)
-    var_five_letter_words.pop(-1)
-    var_six_letter_words.pop(-1)
-    var_seven_letter_words.pop(-1)
-    var_long_letter_words.pop(-1)
-    # create separate word lists
-    var_clean_four_letter_words.pop(-1)
-    var_clean_five_letter_words.pop(-1)
-    var_clean_six_letter_words.pop(-1)
-    var_clean_seven_letter_words.pop(-1)
-    var_clean_long_letter_words.pop(-1)
     # return all word lists in order and ready to be printed nicely
     return [var_all_lists, var_clean_all_lists]
 
@@ -436,6 +424,8 @@ def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date, 
     string_list.insert(4, "   ----------------------------------------------------------------------------\n")
     # remove second list item (with index 0 and no content)
     string_list[5] = ""
+    string_list[-1] = string_list[-1][:-1]
+
     # reopen text file but in write view
     my_file = open('{}.txt'.format(file_name), "w")
     # store new list (after changes) to a local variable
