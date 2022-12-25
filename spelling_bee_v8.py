@@ -417,13 +417,16 @@ def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date, 
 
     # write the date and time to the text file
     string_list.insert(0, "This file was created at {} on {}.\n\n".format(var_time, var_date))
+    # write the letters chosen for the solve
     string_list.insert(0, "The letters chosen are: '{}' (key letter), '{}', '{}', '{}', '{}', '{}' and '{}'"
                           ".\n\n".format(var_letters[0], var_letters[1], var_letters[2], var_letters[3],
                                          var_letters[4], var_letters[5], var_letters[6]))
+    # Add line breaks to separate the header from the text above and table below
     string_list.insert(2, "   ----------------------------------------------------------------------------\n")
     string_list.insert(4, "   ----------------------------------------------------------------------------\n")
     # remove second list item (with index 0 and no content)
     string_list[5] = ""
+    # remove the new line (\n) at the end of the file
     string_list[-1] = string_list[-1][:-1]
 
     # reopen text file but in write view
