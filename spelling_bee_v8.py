@@ -386,15 +386,15 @@ def date_and_time():
     return [var_time, var_date]
 
 
-# see if user wants a csv file or not
+"""# see if user wants a csv file or not
 def check_want_csv_file():
     return yes_no_checker("\n" + line_colour_label("blue") +
                           "Do you also want to save a csv version of the words? Yes/No: ", line_colour_label("red") +
-                          "That's not a valid answer\n")
+                          "That's not a valid answer\n")"""
 
 
 # save results to text (and csv) file(s)
-def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date, var_want_csv_file, var_clean_list):
+def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date, var_clean_list):
     # create dataframe to store words separately according to their lengths
     words_dataframe = {
         "Four letters |": var_all_lists[0],
@@ -446,24 +446,22 @@ def save_to_file(var_all_lists, var_file_name, var_letters, var_time, var_date, 
     # close the text file
     my_file.close()
 
-    # if user wants a csv file copy, save one
-    if var_want_csv_file == "Yes":
-        # create dataframe to store words separately according to their lengths
-        clean_words_dataframe = {
-            "Four letters": var_clean_list[0],
-            "Five letters": var_clean_list[1],
-            "Six letters": var_clean_list[2],
-            "Seven letters": var_clean_list[3],
-            "Eight+ letters": var_clean_list[4],
-        }
-        # create pandas dataframe
-        clean_words_frame = pd.DataFrame(clean_words_dataframe)
-        # make sure all rows are shown and none are hidden
-        pd.set_option('display.max_rows', None)
-        # Sort columns in dataframe by four letters column (first column)
-        clean_words_frame = clean_words_frame.set_index("Four letters")
-        # convert dataframe to csv file
-        clean_words_frame.to_csv("{}.csv".format(var_file_name))
+    # create dataframe to store words separately according to their lengths
+    clean_words_dataframe = {
+        "Four letters": var_clean_list[0],
+        "Five letters": var_clean_list[1],
+        "Six letters": var_clean_list[2],
+        "Seven letters": var_clean_list[3],
+        "Eight+ letters": var_clean_list[4],
+    }
+    # create pandas dataframe
+    clean_words_frame = pd.DataFrame(clean_words_dataframe)
+    # make sure all rows are shown and none are hidden
+    pd.set_option('display.max_rows', None)
+    # Sort columns in dataframe by four letters column (first column)
+    clean_words_frame = clean_words_frame.set_index("Four letters")
+    # convert dataframe to csv file
+    clean_words_frame.to_csv("{}.csv".format(var_file_name))
 
     # print saving success message
     print("\n" + line_colour_label("cyan") + italicise() + "The words have been successfully saved to file."
@@ -525,11 +523,13 @@ if want_file == "Yes":
     current_time = time_and_date_raw[0]
     current_date = time_and_date_raw[1]
 
+    """
     # see if user wants a csv copy too
     want_csv_file = check_want_csv_file()
+    """
 
     # save words to file
-    save_to_file(printable_list, file_name, letters, current_time, current_date, want_csv_file, clean_list)
+    save_to_file(printable_list, file_name, letters, current_time, current_date, clean_list)
 # user does not want to save the words
 else:
     # add spacing to separate differently-coloured line labels
