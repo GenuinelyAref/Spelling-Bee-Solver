@@ -295,10 +295,11 @@ def prepare_for_print(var_valid_words):
 
 
 # give total number of words and total computation time
-def give_computation_stats():
+def give_computation_stats(var_total_comp_time, var_all_words):
     print("\n\n" + line_colour_label("cyan") + bolden() + "Total computation time: {}s"
-          .format(round(total_comp_time, 1)) + reset_text_formatting())
-    print(line_colour_label("cyan") + bolden() + "Total of {} words".format(len(all_words)) + reset_text_formatting())
+          .format(round(var_total_comp_time, 1)) + reset_text_formatting())
+    print(line_colour_label("cyan") + bolden() + "Total of {} words".format(len(var_all_words)) +
+          reset_text_formatting())
 
 
 # check if user wants to save file, return yes or no
@@ -496,7 +497,7 @@ computation_finished()
 print_words(all_words)
 
 # give total number of words and total computation time
-give_computation_stats()
+give_computation_stats(total_comp_time, all_words)
 
 # check if user wants to save file
 want_file = check_want_file()
