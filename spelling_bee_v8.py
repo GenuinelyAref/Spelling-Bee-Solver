@@ -214,11 +214,6 @@ def get_words(var_letters):
     return [computation_time, words]
 
 
-# sort words alphabetically
-def sort_words_alphabetically(var_list_of_words):
-    return sorted(var_list_of_words)
-
-
 # update user on the conclusion of the computation
 def computation_finished():
     print("\n" + line_colour_label("yellow") + "All iterations finished, printing results...\n")
@@ -491,8 +486,6 @@ computation_started()
 word_results_raw = get_words(letters)
 # retrieve list of valid words
 all_words = word_results_raw[1]
-# sort words alphabetically
-sorted_words = sort_words_alphabetically(all_words)
 # retrieve overall computation time
 total_comp_time = word_results_raw[0]
 
@@ -500,7 +493,7 @@ total_comp_time = word_results_raw[0]
 computation_finished()
 
 # print all words found
-print_words(sorted_words)
+print_words(all_words)
 
 # give total number of words and total computation time
 give_computation_stats()
@@ -511,7 +504,7 @@ want_file = check_want_file()
 # user wants to save the words
 if want_file == "Yes":
     # sort all words into lists according to their lengths
-    all_lists = prepare_for_print(sorted_words)
+    all_lists = prepare_for_print(all_words)
     printable_list = all_lists[0]
     clean_list = all_lists[1]
 
