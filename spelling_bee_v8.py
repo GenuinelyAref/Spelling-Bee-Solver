@@ -333,19 +333,42 @@ def get_file_name():
         # if file name is alphanumeric, check if user wants to change it
         # if file name isn't alphanumeric, file name validity stays as False, and loop cycles
         if var_file_name.replace("_", "").isalnum():
-            # check if user wants to change the file name, yes or no response received
-            want_to_change = yes_no_checker("\n" + line_colour_label("yellow") + "Your file name will be {}.txt\n\n"
-                                            .format(var_file_name) + line_colour_label("blue") +
-                                            "Do you want to change it? Yes/No: ", line_colour_label("red") +
-                                            "That's not a valid answer")
-            # if user happy with file name
-            if want_to_change == "No":
-                # return it
-                return var_file_name
-            # otherwise (taken as no)
-            else:
-                # record the number of times the user has changed the file name, to not print error messages prematurely
-                change_count = input_count
+            # see if text file with same next already exists in the same directory
+            try:
+                # attempt to open & close file with the user's chosen file name
+                open('{}.txt'.format(var_file_name), 'r').close()
+                # if successful, then check if user wants to overwrite the existing file
+                want_overwrite = yes_no_checker("\n" + line_colour_label("yellow") +
+                                                "A file named {}.txt already exists\n\n"
+                                                .format(var_file_name) + line_colour_label("blue") +
+                                                "Do you want to overwrite it? Yes/No: ", line_colour_label("red") +
+                                                "That's not a valid answer")
+                # if user does not want to overwrite the existing file
+                if want_overwrite == "No":
+                    # record the number of times the user has to change file name due to overwrite,
+                    # to not print messages prematurely
+                    change_count = input_count
+                # if user wants to overwrite the existing file
+                else:
+                    # return the file name
+                    return var_file_name
+            # if file with same name does not already exist
+            except FileNotFoundError:
+                # check if user wants to change the file name, yes or no response received
+                want_to_change = yes_no_checker("\n" + line_colour_label("yellow") +
+                                                "Your file name will be {}.txt\n\n"
+                                                .format(var_file_name) + line_colour_label("blue") +
+                                                "Do you want to change it? Yes/No: ", line_colour_label("red") +
+                                                "That's not a valid answer")
+                # if user happy with file name
+                if want_to_change == "No":
+                    # return the file name
+                    return var_file_name
+                # otherwise (taken as no)
+                else:
+                    # record the number of times the user has changed the file name,
+                    # to not print error messages prematurely
+                    change_count = input_count
 
 
 # get current date and time
