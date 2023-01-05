@@ -305,7 +305,7 @@ def give_computation_stats(var_total_comp_time, var_all_words):
 # check if user wants to save file, return yes or no
 def check_want_file():
     return yes_no_checker("\n" + line_colour_label("blue") + "Do you want to save the list of words? Yes/No: ",
-                          line_colour_label("red") + "That's not a valid answer\n")
+                          line_colour_label("red") + "That's not a valid answer")
 
 
 # Function obtains valid file name for csv/txt files
@@ -379,7 +379,7 @@ def date_and_time():
 def check_want_csv_file():
     return yes_no_checker("\n" + line_colour_label("blue") +
                           "Do you also want to save a csv version of the words? Yes/No: ", line_colour_label("red") +
-                          "That's not a valid answer\n")"""
+                          "That's not a valid answer")"""
 
 
 # save results to text (and csv) file(s)
