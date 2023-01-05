@@ -327,11 +327,11 @@ def get_file_name():
             # same as prior user notice but in red
             print("\n" + line_colour_label("red") + "The file name can only have alphanumeric characters "
                                                     "(spaces will be replaced with underscores)")
-        # manipulate file name to remove leading/trailing spaces and replace other spaces with underscores
+        # get file name and manipulate it to remove leading/trailing spaces and replace other spaces with underscores
         var_file_name = input("\n" + line_colour_label("blue") + "Please enter a file name: ") \
             .strip(" ").replace(" ", "_")
         # if file name is alphanumeric, check if user wants to change it
-        # otherwise, file name validity stays as False, and loop cycles
+        # if file name isn't alphanumeric, file name validity stays as False, and loop cycles
         if var_file_name.replace("_", "").isalnum():
             # check if user wants to change the file name, yes or no response received
             want_to_change = yes_no_checker("\n" + line_colour_label("yellow") + "Your file name will be {}.txt\n\n"
