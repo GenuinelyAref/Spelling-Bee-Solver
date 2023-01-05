@@ -350,6 +350,14 @@ def get_file_name():
                     change_count = input_count
                 # if user wants to overwrite the existing file
                 else:
+                    """The code has been modified such that the user isn't  asked to confirm if
+                    they want to change the file name after they have confirmed that they want to
+                    overwrite the existing file, as this already counts as a confirmation.
+                    Asking twice would be impractical and employ bad usability, as the first prompt
+                    has a higher weighting (overwriting is more dangerous than accidental file naming).
+                    If the user has already been shown the file name and asked on whether to overwrite
+                    or not, and they have affirmed, checking if they want to change the file name
+                    after is doubling the work and unnecessary."""
                     # return the file name
                     return var_file_name
             # if file with same name does not already exist
