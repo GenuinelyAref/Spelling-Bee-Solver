@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../MMF-Program/.idea/Mega_Movie_Fundraiser.iml" filepath="$PROJECT_DIR$/../MMF-Program/.idea/Mega_Movie_Fundraiser.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Spelling-Bee-Solver.iml" filepath="$PROJECT_DIR$/.idea/Spelling-Bee-Solver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Stack-Overflow/.idea/Stack-Overflow.iml" filepath="$PROJECT_DIR$/../Stack-Overflow/.idea/Stack-Overflow.iml" />
     </modules>
   </component>
 </project>
